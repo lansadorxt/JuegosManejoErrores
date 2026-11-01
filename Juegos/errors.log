@@ -1,0 +1,52 @@
+[2026-10-30 21:26:10,012] ERROR en app: Excepción forzada en /forzar_error_500: division by zero
+Traceback (most recent call last):
+  File "C:\Users\lansa\OneDrive\Documentos\Entono_Virtual\Juegos\app.py", line 131, in forzar_error_500
+    resultado = 1 / 0
+                ~~^~~
+ZeroDivisionError: division by zero
+[2026-10-30 21:26:10,063] ERROR en app: Exception on /forzar_error_500 [GET]
+Traceback (most recent call last):
+  File "C:\Users\lansa\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lansa\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lansa\AppData\Roaming\Python\Python314\site-packages\flask_restful\__init__.py", line 298, in error_router
+    return original_handler(e)
+  File "C:\Users\lansa\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lansa\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\lansa\OneDrive\Documentos\Entono_Virtual\Juegos\app.py", line 134, in forzar_error_500
+    raise ex
+  File "C:\Users\lansa\OneDrive\Documentos\Entono_Virtual\Juegos\app.py", line 131, in forzar_error_500
+    resultado = 1 / 0
+                ~~^~~
+ZeroDivisionError: division by zero
+[2026-10-30 21:26:10,098] ERROR en app: Error 500 detectado: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.
+[2026-10-31 23:19:58,065] ERROR en app: Excepción forzada en /forzar_error_500: division by zero
+Traceback (most recent call last):
+  File "C:\Users\lansa\OneDrive\Documentos\Entono_Virtual\Juegos\app.py", line 131, in forzar_error_500
+    resultado = 1 / 0
+                ~~^~~
+ZeroDivisionError: division by zero
+[2026-10-31 23:19:58,073] ERROR en app: Exception on /forzar_error_500 [GET]
+Traceback (most recent call last):
+  File "C:\Users\lansa\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 1511, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\lansa\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 919, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\lansa\AppData\Roaming\Python\Python314\site-packages\flask_restful\__init__.py", line 298, in error_router
+    return original_handler(e)
+  File "C:\Users\lansa\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 917, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\lansa\AppData\Roaming\Python\Python314\site-packages\flask\app.py", line 902, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)  # type: ignore[no-any-return]
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "C:\Users\lansa\OneDrive\Documentos\Entono_Virtual\Juegos\app.py", line 134, in forzar_error_500
+    raise ex
+  File "C:\Users\lansa\OneDrive\Documentos\Entono_Virtual\Juegos\app.py", line 131, in forzar_error_500
+    resultado = 1 / 0
+                ~~^~~
+ZeroDivisionError: division by zero
+[2026-10-31 23:19:58,083] ERROR en app: Error 500 detectado: 500 Internal Server Error: The server encountered an internal error and was unable to complete your request. Either the server is overloaded or there is an error in the application.

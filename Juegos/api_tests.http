@@ -1,0 +1,39 @@
+###
+GET http://127.0.0.1:8000/api/juegos
+
+###
+POST http://127.0.0.1:8000/api/juegos
+Content-Type: application/json
+
+{
+    "nombre": "Elden Ring",
+    "descripcion": "RPG de acción en mundo abierto con combates desafiantes",
+    "precio": 69.99
+}
+
+###
+GET http://127.0.0.1:8000/api/juegos/1
+
+###
+PUT http://127.0.0.1:8000/api/juegos/1
+Content-Type: application/json
+
+{
+    "nombre": "Elden Ring: Shadow of the Erdtree",
+    "descripcion": "Edición completa con la expansión oficial y contenido descargable",
+    "precio": 89.99
+}
+
+###
+POST http://127.0.0.1:8000/api/juegos
+Content-Type: application/json
+
+{
+    "nombre": "Registro Incompleto"
+}
+
+###
+GET http://127.0.0.1:8000/api/juegos/9999
+
+###
+DELETE http://127.0.0.1:8000/api/juegos/1

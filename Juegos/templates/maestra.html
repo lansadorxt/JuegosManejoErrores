@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD MySQL con Flask {% block titulo %} {% endblock %}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+</head>
+<body>
+    <nav class="navbar is-warning" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a href="https://parzibyte.me/blog" class="navbar-item">
+                <img alt="Logo de Parzibyte" src="https://raw.githubusercontent.com/parzibyte/ejemplo-mern/main/src/img/parzibyte_logo.png" style="max-height: 80px" />
+            </a>
+            <button class="navbar-burger is-warning button" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </button>
+        </div>
+        <div class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="{{url_for('juegos')}}">Juegos</a>
+            </div>
+<div class="navbar-end">
+    <div class="navbar-item">
+        <div class="buttons">
+            {% if current_user.is_authenticated %}
+                <span class="mr-3">Hola, {{ current_user.username }}</span>
+                <a class="button is-light" href="{{ url_for('auth.logout') }}">Cerrar Sesión</a>
+            {% else %}
+                <a class="button is-primary" href="{{ url_for('auth.register') }}">Registrarse</a>
+                <a class="button is-light" href="{{ url_for('auth.login') }}">Ingresar</a>
+            {% endif %}
+        </div>
+    </div>
+</div>
+        </div>
+    </nav>
+    {% block contenido %} {% endblock %}
+</body>
+</html>

@@ -1,0 +1,10 @@
+{% extends "maestra.html" %}
+{% block titulo %}Error 400 - Solicitud Incorrecta{% endblock %}
+{% block contenido %}
+<div class="container text-center py-5">
+    <h1 class="display-1 text-warning fw-bold">400</h1>
+    <h2 class="mb-3">Petición Incorrecta</h2>
+    <p class="lead">La solicitud enviada al servidor es inválida o faltan parámetros obligatorios.</p>
+    <a href="{{ url_for('juegos') }}" class="btn btn-primary mt-3">Volver al Inicio</a>
+</div>
+{% endblock %}

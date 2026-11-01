@@ -1,0 +1,10 @@
+{% extends "maestra.html" %}
+{% block titulo %}Error 404 - Página No Encontrada{% endblock %}
+{% block contenido %}
+<div class="container text-center py-5">
+    <h1 class="display-1 text-danger fw-bold">404</h1>
+    <h2 class="mb-3">Recurso No Encontrado</h2>
+    <p class="lead">El enlace o juego al que buscas ingresar no se encuentra alojado en el sistema.</p>
+    <a href="{{ url_for('juegos') }}" class="btn btn-primary mt-3">Volver al Inicio</a>
+</div>
+{% endblock %}

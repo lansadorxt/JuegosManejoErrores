@@ -1,0 +1,10 @@
+{% extends "maestra.html" %}
+{% block titulo %}Error 500 - Error Interno del Servidor{% endblock %}
+{% block contenido %}
+<div class="container text-center py-5">
+    <h1 class="display-1 text-secondary fw-bold">500</h1>
+    <h2 class="mb-3">Error Interno del Servidor</h2>
+    <p class="lead">Se detectó un error imprevisto en la aplicación. La falla ya fue registrada automáticamente.</p>
+    <a href="{{ url_for('juegos') }}" class="btn btn-primary mt-3">Volver al Inicio</a>
+</div>
+{% endblock %}

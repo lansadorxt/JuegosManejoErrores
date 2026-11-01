@@ -1,0 +1,72 @@
+{% extends "maestra.html" %}
+{% block titulo %} Iniciar Sesión {% endblock %}
+
+{% block contenido %}
+<section class="section">
+    <div class="columns is-centered">
+        <div class="column is-4">
+            <h3 class="title is-3 has-text-centered">Iniciar Sesión</h3>
+
+            <!-- Mensajes Flash de credenciales incorrectas desde Python -->
+            {% with messages = get_flashed_messages() %}
+              {% if messages %}
+                {% for message in messages %}
+                  <div class="notification is-danger">
+                    {{ message }}
+                  </div>
+                {% endfor %}
+              {% endif %}
+            {% endwith %}
+
+            <!-- novalidate bloquea los mensajes nativos de HTML5 -->
+            <form method="POST" action="{{ url_for('auth.login') }}" novalidate>
+                {{ form.hidden_tag() }}
+
+                <div class="field">
+                    <label class="label">Correo Electrónico</label>
+                    <div class="control">
+                        {{ form.email(class="input", placeholder="tu@email.com") }}
+                    </div>
+                    <!-- Errores generados por Python -->
+                    {% if form.email.errors %}
+                        {% for error in form.email.errors %}
+                            <p class="help is-danger">{{ error }}</p>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+
+                <div class="field">
+                    <label class="label">Contraseña</label>
+                    <div class="control">
+                        {{ form.password(class="input", placeholder="Contraseña") }}
+                    </div>
+                    <!-- Errores generados por Python -->
+                    {% if form.password.errors %}
+                        {% for error in form.password.errors %}
+                            <p class="help is-danger">{{ error }}</p>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+
+                <div class="field">
+                    <div class="control">
+                        <label class="checkbox">
+                            {{ form.remember_me }} {{ form.remember_me.label.text }}
+                        </label>
+                    </div>
+                </div>
+
+                <div class="field mt-4">
+                    <div class="control">
+                        {{ form.submit(class="button is-primary is-fullwidth") }}
+                    </div>
+                </div>
+            </form>
+
+            <p class="has-text-centered mt-4">
+                ¿No tienes cuenta? <a href="{{ url_for('auth.register') }}">Regístrate aquí</a>
+            </p>
+        </div>
+    </div>
+</section>
+{% endblock %}
